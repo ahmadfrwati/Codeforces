@@ -1,0 +1,35 @@
+input1 = input() #first line of input
+# splitting input into number of friends and the height of fence
+n, h = input1.split()
+# both n and h must be integer
+n=int(n)
+h=int(h)
+all=[]
+#width function to calculate the target
+def width(all,n,h):
+    count = 0
+    if len(all) == n:
+        for j in range(n):
+            if int(all[j]) <= h:
+                count = count+1
+            else:
+                count = count + 2
+        print(count)
+
+
+
+
+#limitations
+if n>=1 and n<=1000:
+    if h>=1 and h<=1000:
+       heights=input()
+       all.append(heights.split())
+       # all is list of list so we should to extract inner list of elements
+       all = all[0][:]
+       width(all,n,h)
+
+
+
+
+
+
